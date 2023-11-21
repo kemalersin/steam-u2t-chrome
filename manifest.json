@@ -1,0 +1,28 @@
+﻿{
+  "name": "__MSG_appName__",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "tr",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.store.steampowered.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],  
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "*://api.genelpara.com/*"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Steam U2T",
+    "description": "Eklenti adı."
+  },
+  "appDescription": {
+    "message": "Steam için USD/TL çeviricisi",
+    "description": "Eklenti açıklaması."
+  }
+}
