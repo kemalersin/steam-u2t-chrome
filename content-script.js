@@ -5,16 +5,14 @@ chrome.storage.local.get("usdRate").then((result) => {
 
   const observer = new MutationObserver((m) => {
     var regex = /\$([0-9,]+\.\d{2})\s*(USD)?/;
+    
     var elements = document.querySelectorAll(
-      ".price, .discount_final_price, .game_purchase_price, .game_area_dlc_price, .your_price div, " +
-        ".salepreviewwidgets_StoreSalePriceBox_Wh0L8"
+      ".price:not(.u2t), .discount_final_price:not(.u2t), " +
+        ".game_purchase_price:not(.u2t), .game_area_dlc_price:not(.u2t), " +
+        ".your_price div:not(.u2t), .salepreviewwidgets_StoreSalePriceBox_Wh0L8:not(.u2t)"
     );
 
     elements.forEach((element) => {
-      if (element.matches(".u2t")) {
-        return;
-      }
-
       var match = element.textContent.match(regex);
 
       if (match) {
