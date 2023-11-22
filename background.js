@@ -1,5 +1,5 @@
 const delayInMinutes = 0;
-const periodInMinutes = 1;
+const periodInMinutes = 10;
 
 const apiUrl = "https://api.genelpara.com/embed/doviz.json";
 
