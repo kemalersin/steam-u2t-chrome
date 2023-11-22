@@ -1,11 +1,10 @@
 const updateFrequency = 10;
 const apiUrl = "https://api.genelpara.com/embed/doviz.json";
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.alarms.create("update", {
-    delayInMinutes: 0,
-    periodInMinutes: updateFrequency,
-  });
+chrome.runtime.onInstalled.addListener(async ({ reason }) => {
+  if (reason !== "install") {
+    return;
+  }
 
   chrome.alarms.onAlarm.addListener(() =>
     fetch(apiUrl, {
@@ -19,4 +18,9 @@ chrome.runtime.onInstalled.addListener(() => {
         chrome.storage.local.set({ usdRate: response.USD.satis })
       )
   );
+
+  await chrome.alarms.create("update", {
+    delayInMinutes: 0,
+    periodInMinutes: updateFrequency,
+  });  
 });
