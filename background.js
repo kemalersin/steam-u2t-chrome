@@ -1,16 +1,6 @@
 const updateFrequency = 10;
 const apiUrl = "https://api.genelpara.com/embed/doviz.json";
 
-function setAlarm() {
-  chrome.storage.local.get("updateFrequency", (result) => {
-    chrome.alarms.clear("update");
-
-    chrome.alarms.create("update", {
-      periodInMinutes: result.updateFrequency || updateFrequency,
-    });
-  });
-}
-
 function getExchangeRate() {
   fetch(apiUrl, {
     method: "GET",
@@ -24,15 +14,13 @@ function getExchangeRate() {
     );
 }
 
-chrome.runtime.onInstalled.addListener((details) => {
-  chrome.alarms.onAlarm.addListener((alarm) => getExchangeRate());
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.alarms.create("update", {
+    periodInMinutes: updateFrequency,
+  });
 
-  setAlarm();
+  chrome.alarms.onAlarm.addListener(() => getExchangeRate());
+
   getExchangeRate();
 });
 
-chrome.runtime.onMessage.addListener((msg, sender) => {
-  if (msg.updateAlarm) {
-    setAlarm();
-  }
-});
