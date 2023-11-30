@@ -19,7 +19,6 @@ window.addEventListener("load", function () {
 
     if (data.usdRate) {
       rate.classList.remove("d-none");
-
       rate.textContent = getLocalizedPrice(+data.usdRate, 4);
     }
   });
