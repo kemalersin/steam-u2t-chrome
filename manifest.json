@@ -1,6 +1,8 @@
-﻿{
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
   "name": "__MSG_appName__",
-  "version": "0.1.3",
+  "version": "0.1.8",
   "manifest_version": 3,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -8,15 +10,23 @@
     "128": "assets/icon-128.png"
   },
   "default_locale": "tr",
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
   "content_scripts": [
     {
       "matches": [
+        "https://*.steamcommunity.com/*",
         "https://*.store.steampowered.com/*"
       ],
-      "js": ["content-script.js"],
+      "js": [
+        "scripts/globals.js",
+        "scripts/helpers.js",
+        "scripts/content-script.js"
+      ],
       "run_at": "document_end"
     }
   ],

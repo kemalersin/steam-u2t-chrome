@@ -1,10 +1,10 @@
-const delayInMinutes = 0;
-const periodInMinutes = 10;
+const DELAY_IN_MINUTES = 0;
+const PERIOD_IN_MINUTES = 10;
 
-const apiUrl = "https://api.genelpara.com/embed/doviz.json";
+const API_URL = "https://api.genelpara.com/embed/doviz.json";
 
 chrome.alarms.onAlarm.addListener(() =>
-  fetch(apiUrl, {
+  fetch(API_URL, {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -20,8 +20,8 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.get("alarm", (alarm) => {
     if (!alarm) {
       chrome.alarms.create("alarm", {
-        delayInMinutes,
-        periodInMinutes,
+        delayInMinutes: DELAY_IN_MINUTES,
+        periodInMinutes: PERIOD_IN_MINUTES,
       });
     }
   });

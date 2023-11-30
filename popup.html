@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html id="popup">
+  <head>
+    <meta charset="utf-8" />
+    <link href="styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/popup.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <form name="settings">
+      <div class="card text-white bg-primary">
+        <div class="card-header text-center position-relative">
+          STEAM U2T
+          <span id="rate" class="badge d-none bg-light text-dark position-absolute top-50 end-0 translate-middle-y me-2"></span>
+        </div>
+        <div class="card-body">          
+          <fieldset class="form-group">
+            <legend><small>Ana Birim</small></legend>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="opCurrency"
+                id="opUSD"
+                value="1"
+                checked=""
+              />
+              <label class="form-check-label" for="opUSD"> USD </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="opCurrency"
+                id="opTRY"
+                value="2"
+              />
+              <label class="form-check-label" for="opTRY"> TRY </label>
+            </div>
+          </fieldset>
+
+          <hr />
+
+          <fieldset class="form-group">
+            <legend><small>Gösterim Türü</small></legend>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="opPresentation"
+                id="opMainCurrency"
+                value="1"
+                checked=""
+              />
+              <label class="form-check-label" for="opMainCurrency">
+                Ana birim
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="opPresentation"
+                id="opSideBySide"
+                value="2"
+              />
+              <label class="form-check-label" for="opSideBySide">
+                Yan yana
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="opPresentation"
+                id="opRotative"
+                value="3"
+              />
+              <label class="form-check-label" for="opRotative">
+                Dönüşümlü
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="opPresentation"
+                id="opHover"
+                value="4"
+              />
+              <label class="form-check-label" for="opHover">
+                Üzerindeyken
+              </label>
+            </div>
+          </fieldset>
+
+          <hr />
+
+          <fieldset class="form-group">
+            <legend><small>Komisyon</small></legend>
+
+            <div class="input-group">
+              <span class="input-group-text">%</span>
+              <input type="number" name="opCommission" id="opCommission" class="form-control form-control-sm">
+            </div>    
+          </fieldset>          
+
+          <hr />          
+
+          <fieldset class="form-group">
+            <legend><small>Diğer Ayarlar</small></legend>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" name="opDecimals" id="opDecimals" checked="checked">
+              <label class="form-check-label" for="opDecimals">Kuruşları göster</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" name="opAutoClose" id="opAutoClose" checked="checked">
+              <label class="form-check-label" for="opAutoClose">Otomatik kapat</label>
+            </div>            
+          </fieldset>
+        </div>
+      </div>
+    </form>
+
+    <script src="scripts/globals.js"></script>
+    <script src="scripts/helpers.js"></script>
+    <script src="scripts/popup.js"></script>
+  </body>
+</html>
