@@ -41,7 +41,7 @@ function update(data, settings) {
       
       var originalPrice = originalContent.replace(CURRENCY_CODES.USD, "").trim();
 
-      if (settings.commission) {
+      if (settings.commission !== COMMISSIONS.NONE) {
         multipliedPrice = multipliedPrice * (1 + (settings.commission / 100));
       }      
 
