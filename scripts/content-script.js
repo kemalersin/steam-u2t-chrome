@@ -93,7 +93,7 @@ function init(updateData) {
           interval = setInterval(() => {
             var elements = document.querySelectorAll(CUSTOM_HTML_DATA_SELECTOR);
 
-            elements.forEach((el) => hover(el)());
+            elements.forEach((element) => getRotationModifier(element)());
           }, ROTATION_TIMEOUT);
         }
 
