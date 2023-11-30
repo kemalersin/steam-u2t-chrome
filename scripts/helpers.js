@@ -2,6 +2,10 @@ function convertHTMLSelectors() {
     return STEAM_HTML_SELECTORS.join(`:not(.${CUSTOM_HTML_SIGN}),`)
 }
 
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
 function getLocalizedPrice(price, fractionDigits) {
   return price.toLocaleString("tr-TR", {
     style: "currency",

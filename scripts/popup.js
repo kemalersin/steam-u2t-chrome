@@ -2,9 +2,14 @@ window.addEventListener("load", function () {
   chrome.storage.local.get(DEFAULT_OPTIONS).then((result) => {
     var settings = document.forms["settings"].elements;
 
-    settings.opCurrency.value = result.currency;
-    settings.opPresentation.value = result.presentation;
+    settings.opCurrency.value = getKeyByValue(CURRENCIES, result.currency);
+    settings.opPresentation.value = getKeyByValue(
+      PRESENTATIONS,
+      result.presentation
+    );
+
     settings.opCommission.value = result.commission;
+
     settings.opDecimals.checked = result.decimals;
     settings.opAutoClose.checked = result.autoClose;
   });
@@ -22,9 +27,11 @@ window.addEventListener("load", function () {
 
 document.forms["settings"].addEventListener("change", async function () {
   var options = {
-    currency: +this.opCurrency.value,
-    presentation: +this.opPresentation.value,
+    currency: CURRENCIES[this.opCurrency.value],
+    presentation: PRESENTATIONS[this.opPresentation.value],
+
     commission: +this.opCommission.value,
+
     decimals: this.opDecimals.checked,
     autoClose: this.opAutoClose.checked,
   };
