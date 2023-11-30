@@ -72,7 +72,7 @@ function update(data, settings) {
           element.style.position = HOVER_STYLE.POSITION;
           element.style.zIndex = HOVER_STYLE.Z_INDEX;
 
-          elementonmouseover = getRotationModifier(element);
+          element.onmouseover = getRotationModifier(element);
           element.onmouseout = getRotationModifier(element);
         }
       }
