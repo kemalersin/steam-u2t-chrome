@@ -66,5 +66,5 @@ const STEAM_HTML_SELECTORS = [
   ".market_commodity_orders_table td",
   "#marketWalletBalanceAmount",
   "#header_wallet_balance",
-  "#search_suggestion_contents .match_subtitle",
+  "#search_suggestion_contents .match_subtitle"
 ];
