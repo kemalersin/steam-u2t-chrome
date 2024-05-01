@@ -60,11 +60,12 @@ const STEAM_HTML_SELECTORS = [
   ".discount_final_price",
   ".game_purchase_price",
   ".game_area_dlc_price",
-  ".your_price div",
+  ".your_price div",  
   ".salepreviewwidgets_StoreSalePriceBox_Wh0L8",
   ".market_commodity_orders_header_promote",
   ".market_commodity_orders_table td",
   "#marketWalletBalanceAmount",
   "#header_wallet_balance",
-  "#search_suggestion_contents .match_subtitle"
+  "#search_suggestion_contents .match_subtitle",
+  ".Wh0L8EnwsPV_8VAu8TOYr"
 ];
