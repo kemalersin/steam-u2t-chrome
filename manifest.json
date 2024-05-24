@@ -2,7 +2,7 @@
   "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "__MSG_appName__",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "manifest_version": 3,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -31,5 +31,5 @@
     }
   ],
   "permissions": ["storage", "alarms"],
-  "host_permissions": ["*://api.genelpara.com/*"]
+  "host_permissions": ["*://www.genelpara.com/*"]
 }

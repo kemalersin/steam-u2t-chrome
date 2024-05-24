@@ -1,14 +1,11 @@
 const DELAY_IN_MINUTES = 0;
 const PERIOD_IN_MINUTES = 10;
 
-const API_URL = "https://api.genelpara.com/embed/doviz.json";
+const API_URL = "https://www.genelpara.com/fiyat.php";
 
 chrome.alarms.onAlarm.addListener(() =>
   fetch(API_URL, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-    },
+    method: "GET"
   })
     .then((response) => response.json())
     .then((response) =>
