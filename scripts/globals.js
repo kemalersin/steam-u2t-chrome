@@ -67,5 +67,7 @@ const STEAM_HTML_SELECTORS = [
   "#marketWalletBalanceAmount",
   "#header_wallet_balance",
   "#search_suggestion_contents .match_subtitle",
-  ".Wh0L8EnwsPV_8VAu8TOYr"
+  ".Wh0L8EnwsPV_8VAu8TOYr",
+  "._2WLaY5TxjBGVyuWe_6KS3N",
+  "._2WBvzE2CywKDLD0QTnbmUE"
 ];
