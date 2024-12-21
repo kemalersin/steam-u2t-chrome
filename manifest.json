@@ -2,7 +2,7 @@
   "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "__MSG_appName__",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "manifest_version": 3,
   "description": "__MSG_appDescription__",
   "icons": {

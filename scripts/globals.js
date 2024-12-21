@@ -69,5 +69,6 @@ const STEAM_HTML_SELECTORS = [
   "#search_suggestion_contents .match_subtitle",
   ".Wh0L8EnwsPV_8VAu8TOYr",
   "._2WLaY5TxjBGVyuWe_6KS3N",
-  "._2WBvzE2CywKDLD0QTnbmUE"
+  "._2WBvzE2CywKDLD0QTnbmUE",
+  "._3j4dI1yA7cRfCvK8h406OB"
 ];
