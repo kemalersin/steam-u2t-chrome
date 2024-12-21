@@ -59,7 +59,6 @@ const STEAM_HTML_SELECTORS = [
   ".normal_price span",
   ".discount_final_price",
   ".game_purchase_price",
-  ".game_area_dlc_price",
   ".your_price div",  
   ".salepreviewwidgets_StoreSalePriceBox_Wh0L8",
   ".market_commodity_orders_header_promote",
